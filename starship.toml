@@ -1,0 +1,163 @@
+# color constants:
+# black, red, green, yellow,
+# blue, purple, cyan, white
+
+# bright color variants:
+# add "bright-" before the color
+
+format = """
+[░▒▓](purple)\
+$os\
+[](bg:blue fg:purple)\
+$directory\
+[](bg:green fg:blue)\
+$git_branch\
+$git_status\
+$git_metrics\
+[](fg:green bg:yellow)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:yellow)\
+$fill\
+[◖](fg:bright-purple)\
+$time\
+[ ](fg:bright-purple)\
+\n$character"""
+
+add_newline = false
+
+[os]
+disabled = false
+style = "bold bright-red bg:purple"
+format = "[ $symbol]($style)"
+
+[os.symbols]
+AIX = "➿ "
+Alpaquita = "🔔 "
+AlmaLinux = " "        # nf-linux-almalinux
+Alpine = " "           # nf-linux-alpine
+Amazon = "🙂 "
+Android = " "          # nf-fa-android
+Arch = " "             # nf-linux-archlinux
+Artix = " "            # nf-linux-artix
+#Bluefin = "🐟 "
+CachyOS = "🎗️ "
+CentOS = " "           # nf-linux-centos
+Debian = " "           # nf-linux-debian
+DragonFly = "🐉 "
+Emscripten = "🔗 "
+EndeavourOS = " "      # nf-linux-endeavour
+Fedora = " "           # nf-linux-fedora
+FreeBSD = " "          # nf-linux-freebsd
+Garuda = " "           # nf-linux-garuda
+Gentoo = " "           # nf-linux-gentoo
+HardenedBSD = "🛡️ "
+Illumos = " "          # nf-linux-illumos
+Kali = " "             # nf-linux-kali_linux
+Linux = " "            # nf-linux-tux
+Mabox = "📦 "
+Macos = " "            # nf-linux-apple
+Manjaro = " "          # nf-linux-manjaro
+Mariner = "🌊 "
+MidnightBSD = "🌘 "
+Mint = " "             # nf-linux-linuxmint
+NetBSD = "🚩 "
+NixOS = " "            # nf-linux-nixos
+Nobara = " "           # nf-linux-nobara
+OpenBSD = " "          # nf-linux-openbsd
+OpenCloudOS = "☁️ "
+openEuler = "🦉 "
+openSUSE = " "         # nf-linux-opensuse
+OracleLinux = " "      # nf-dev-oracle
+Pop = " "              # nf-linux-pop_os
+Raspbian = " "         # nf-linux-raspberry_pi
+Redhat = " "           # nf-linux-redhat
+RedHatEnterprise = " " # nf-linux-redhat
+RockyLinux = " "       # nf-linux-rocky_linux
+Redox = "🧪 "
+Solus = " "            # nf-linux-solus
+SUSE = " "             # nf-fa-suse
+Ubuntu = " "           # nf-linux-ubuntu
+Ultramarine = "🔷 "
+Unknown = "❓ "
+Uos = "🐲 "
+Void = " "             # nf-linux-void
+Windows = " "          # nf-custom-windows
+
+[directory]
+style = "bold bg:blue fg:#000000"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰎆 "
+"Pictures" = " "
+"Code" = " "
+"code" = " "
+
+[git_branch]
+symbol = "󰘬"
+style = "bold bg:green fg:#000000"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bold bg:green fg:bright-red"
+format = '[($all_status$ahead_behind )]($style)'
+
+[git_metrics]
+added_style = "bold bg:green fg:bright-blue"
+deleted_style = "bold bg:green fg:bright-red"
+disabled = false
+format = "([+$added]($added_style))([-$deleted]($deleted_style))"
+
+[c]
+symbol = "C"
+style = "bold bg:yellow fg:bright_red"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[cmake]
+symbol = " "
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[cobol]
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[rust]
+symbol = "🦀"
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol]($style)[($version)](fg:#000000 bg:yellow)'
+
+[golang]
+symbol = ""
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[php]
+symbol = "󰌟 "
+style = "bold bright-red bg:yellow"
+version_format = "v${major}.${minor}"
+format = '[ $symbol ($version)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bold fg:#000000 bg:bright-purple"
+format = '[󰥔 $time ]($style)'
