@@ -139,7 +139,7 @@ version_format = "v${major}.${minor}"
 format = '[ $symbol ($version)]($style)'
 
 [rust]
-symbol = "🦀"
+symbol = "🦀" # I know there's an official logo, but the crab is cute.
 style = "bold bright-red bg:yellow"
 version_format = "v${major}.${minor}"
 format = '[ $symbol]($style)[($version)](fg:#000000 bg:yellow)'
