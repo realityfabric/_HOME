@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Jessica Jones-Copeland
+	email = jessica@realityfabric.net
+[alias]
+	logadog = log --all --decorate --oneline --graph
