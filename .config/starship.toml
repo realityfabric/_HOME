@@ -1,36 +1,53 @@
-# color constants:
-# black, red, green, yellow,
-# blue, purple, cyan, white
-
-# bright color variants:
-# add "bright-" before the color
-
 format = """
-[░▒▓](purple)\
 $os\
-[](bg:blue fg:purple)\
+$username$hostname\
+[║](bg:blue fg:pink2)\
 $directory\
-[](bg:green fg:blue)\
+[║](bg:blue fg:pink2)\
 $git_branch\
 $git_status\
 $git_metrics\
-[](fg:green bg:yellow)\
-$nodejs\
-$rust\
+[║](fg:pink2 bg:blue)\
+$c\
+$elixir\
+$elm\
 $golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nim\
+$nodejs\
 $php\
-[](fg:yellow)\
-$fill\
-[◖](fg:bright-purple)\
-$time\
-[ ](fg:bright-purple)\
+$rust\
+$scala\
+[║](fg:pink2 bg:blue)\
+$docker_context\
+[║](fg:blue)\
 \n$character"""
 
 add_newline = false
 
+palette = "synthwave_circuit"
+
+# https://www.media.io/color-palette/cyberpunk-color-palette.html
+[palettes.synthwave_circuit]
+blue = "#120A3A"
+blue2 = "#0b1026"
+pink = "#FF3B7F"
+pink2 = "#ff2e63"
+cyan = "#00F5D4"
+cyan2 = "#08d9d6"
+yellow = "#FFD166"
+yellow2 = "#f9ed69"
+purple = "#2D1B69"
+purple2 = "#252A41"
+green = "#87ff00"
+black = "#0c0f0a"
+
 [os]
 disabled = false
-style = "bold bright-red bg:purple"
+style = "bold fg:cyan bg:blue"
 format = "[ $symbol]($style)"
 
 [os.symbols]
@@ -86,8 +103,23 @@ Uos = "🐲 "
 Void = " "             # nf-linux-void
 Windows = " "          # nf-custom-windows
 
+[username]
+disabled = false
+show_always = false
+style_root = "bold bg:bright-red fg:black"
+style_user = "bold bg:blue fg:yellow2"
+format = "[$user]($style)[ in ](bg:blue fg:cyan)"
+
+[hostname]
+disabled = false
+ssh_only = true
+ssh_symbol = "🌐"
+trim_at = "."
+style = "bold bg:blue fg:yellow"
+format = "[$ssh_symbol$hostname ]($style)"
+
 [directory]
-style = "bold bg:blue fg:#000000"
+style = "bold bg:blue fg:cyan"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -102,22 +134,22 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = "󰘬"
-style = "bold bg:green fg:#000000"
+style = "bold bg:blue fg:cyan"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bold bg:green fg:bright-red"
+style = "bold bg:blue fg:yellow"
 format = '[($all_status$ahead_behind )]($style)'
 
 [git_metrics]
-added_style = "bold bg:green fg:bright-blue"
-deleted_style = "bold bg:green fg:bright-red"
+added_style = "bold bg:blue fg:green"
+deleted_style = "bold bg:blue fg:bright-red"
 disabled = false
-format = "([+$added]($added_style))([-$deleted]($deleted_style))"
+format = "([+$added]($added_style))([-$deleted]($deleted_style))[ ](bg:blue)"
 
 [c]
 symbol = "C"
-style = "bold bg:yellow fg:bright_red"
+style = "bold bg:blue fg:bright-red"
 version_format = "v${major}.${minor}"
 format = '[ $symbol ($version)]($style)'
 
@@ -140,9 +172,8 @@ format = '[ $symbol ($version)]($style)'
 
 [rust]
 symbol = "🦀" # I know there's an official logo, but the crab is cute.
-style = "bold bright-red bg:yellow"
 version_format = "v${major}.${minor}"
-format = '[ $symbol]($style)[($version)](fg:#000000 bg:yellow)'
+format = '[ $symbol](bold fg:bright-red bg:blue)[($version) ](bg:blue fg:cyan)'
 
 [golang]
 symbol = ""
@@ -156,8 +187,13 @@ style = "bold bright-red bg:yellow"
 version_format = "v${major}.${minor}"
 format = '[ $symbol ($version)]($style)'
 
+[docker_context]
+symbol = " "
+style = "bold bg:blue fg:cyan2"
+format = "[via ](bg:blue fg:cyan2)[$symbol$context ]($style)"
+
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bold fg:#000000 bg:bright-purple"
-format = '[󰥔 $time ]($style)'
+style = "bold bg:yellow fg:blue"
+format = '[ 󰥔 $time ]($style)'
