@@ -11,3 +11,5 @@ export XDG_LOG_HOME="$HOME/.logs"
 export EDITOR='nvim'
 export BROWSER='/usr/bin/librewolf'
 
+# Other
+export WWW_HOME="https://duckduckgo.com"
