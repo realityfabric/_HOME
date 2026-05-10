@@ -12,9 +12,6 @@ cgi_bin
 clear_buffer 1
 close_tab_back 0
 confirm_qq 1
-cookie_accept_domains 
-cookie_avoid_wrong_number_of_dots 
-cookie_reject_domains 
 cross_origin_referer 1
 decode_cte 0
 decode_url 0
@@ -167,5 +164,8 @@ visited_color magenta
 # Cookies
 accept_bad_cookie 0
 accept_cookie 1
+cookie_accept_domains
+cookie_avoid_wrong_number_of_dots
+cookie_reject_domains
 show_cookie 0
 use_cookie 1
