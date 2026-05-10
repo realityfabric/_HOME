@@ -5,7 +5,6 @@ active_style 1
 alt_entity 0
 argv_is_url 1
 auto_detect 2
-auto_image 1
 auto_uncompress 0
 bgextviewer 1
 cgi_bin 
@@ -22,7 +21,6 @@ disable_center 0
 disable_secret_security_check 0
 display_borders 0
 display_charset UTF-8
-display_image 1
 display_ins_del 1
 display_lineinfo 0
 display_link 0
@@ -35,7 +33,6 @@ editor sensible-editor
 emacs_like_lineedit 0
 ext_dirlist 1
 ext_halfdump 0
-ext_image_viewer 1
 extbrowser sensible-browser
 extbrowser2 
 extbrowser3 
@@ -66,7 +63,6 @@ ignore_null_img_alt 1
 ignorecase_search 1
 image_map_list 1
 image_scale 100
-imgdisplay kitty
 indent_incr 4
 index_file 
 inline_img_protocol 4
@@ -169,3 +165,9 @@ cookie_avoid_wrong_number_of_dots
 cookie_reject_domains
 show_cookie 0
 use_cookie 1
+
+# Images
+auto_image 1
+display_image 1
+ext_image_viewer 1
+imgdisplay kitty
