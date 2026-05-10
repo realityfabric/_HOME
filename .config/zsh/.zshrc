@@ -21,6 +21,7 @@ alias pro="swipl"
 alias python="python3"
 alias vim="nvim"
 alias ssha='eval "$(ssh-agent -s)"'
+alias tree='tree -I ".git/"' # Ignore .git dir even when using -a flag
 
 # backup configuration files
 alias confbak="rsync -avzr --existing ~/ ~/code/configs/"
