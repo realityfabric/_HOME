@@ -49,16 +49,12 @@ fold_textarea 0
 follow_locale 1
 follow_redirection 10
 frame 1
-ftp_proxy 
 ftppass_hostnamegen 0
 ftppasswd anonymous@
 gb18030_as_ucs 0
-gopher_proxy 
 graphic_char 0
 high-intensity 1
 history 100
-http_proxy 
-https_proxy 
 ignore_null_img_alt 1
 ignorecase_search 1
 image_map_list 1
@@ -84,9 +80,7 @@ nextpage_topline 0
 nntpmode 
 nntpserver 
 no_cache 0
-no_proxy 
 no_referer 0
-noproxy_netaddr 0
 open_tab_blank 0
 open_tab_dl_list 0
 pagerline 10000
@@ -138,7 +132,6 @@ use_language_tag 1
 use_lessopen 0
 use_migemo 1
 use_mouse 1
-use_proxy 1
 use_wide 1
 user_agent 
 vi_prec_num 0
@@ -171,3 +164,12 @@ auto_image 1
 display_image 1
 ext_image_viewer 1
 imgdisplay kitty
+
+# Proxies
+ftp_proxy
+gopher_proxy
+http_proxy
+https_proxy
+no_proxy
+noproxy_netaddr 0
+use_proxy 1
