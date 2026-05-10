@@ -20,4 +20,7 @@ alias lla="ls -la"
 alias pro="swipl"
 alias python="python3"
 alias vim="nvim"
+alias ssha='eval "$(ssh-agent -s)"'
 
+# backup configuration files
+alias confbak="rsync -avzr --existing ~/ ~/code/configs/"
