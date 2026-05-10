@@ -60,9 +60,7 @@ ignorecase_search 1
 image_map_list 1
 image_scale 100
 indent_incr 4
-index_file 
 inline_img_protocol 4
-keymap_file keymap
 label_topline 0
 localhost_only 0
 mailcap ~/.w3m/mailcap, /etc/w3m/mailcap, /etc/mailcap
@@ -84,12 +82,10 @@ no_referer 0
 open_tab_blank 0
 open_tab_dl_list 0
 pagerline 10000
-passwd_file ~/.w3m/passwd
 personal_document_root 
 pixel_per_char 7
 pixel_per_line 14
 pre_conv 0
-pre_form_file ~/.w3m/pre_form
 preserve_timestamp 1
 pseudo_inlines 1
 relative_wheel_scroll 0
@@ -101,15 +97,11 @@ search_conv 1
 show_lnum 0
 show_srch_str 1
 simple_preserve_space 0
-siteconf_file ~/.w3m/siteconf
 space_autocomplete 0
 ssl_ca_default 1
-ssl_ca_file 
 ssl_ca_path /etc/ssl/certs
-ssl_cert_file 
 ssl_cipher 
 ssl_forbid_method 2, 3, t, 5
-ssl_key_file 
 ssl_min_version 
 ssl_verify_server 1
 strict_iso2022 1
@@ -158,6 +150,16 @@ cookie_avoid_wrong_number_of_dots
 cookie_reject_domains
 show_cookie 0
 use_cookie 1
+
+# File Paths
+index_file
+keymap_file keymap
+passwd_file ~/.w3m/passwd
+pre_form_file ~/.w3m/pre_form
+siteconf_file ~/.w3m/siteconf
+ssl_ca_file
+ssl_cert_file
+ssl_key_file
 
 # Images
 auto_image 1
