@@ -3,21 +3,16 @@ accept_cookie 1
 accept_encoding gzip, compress, bzip, bzip2, deflate
 accept_language en;q=1.0
 accept_media text/html, text/*;q=0.5, image/*, application/*, video/*, audio/*, x-scheme-handler/*, inode/*, message/*, font/*
-active_color cyan
 active_style 1
 alt_entity 0
-anchor_color blue
 argv_is_url 1
 auto_detect 2
 auto_image 1
 auto_uncompress 0
-basic_color terminal
-bg_color terminal
 bgextviewer 1
 cgi_bin 
 clear_buffer 1
 close_tab_back 0
-color 1
 confirm_qq 1
 cookie_accept_domains 
 cookie_avoid_wrong_number_of_dots 
@@ -61,7 +56,6 @@ fold_line 0
 fold_textarea 0
 follow_locale 1
 follow_redirection 10
-form_color red
 frame 1
 ftp_proxy 
 ftppass_hostnamegen 0
@@ -75,7 +69,6 @@ http_proxy
 https_proxy 
 ignore_null_img_alt 1
 ignorecase_search 1
-image_color green
 image_map_list 1
 image_scale 100
 imgdisplay kitty
@@ -90,7 +83,6 @@ mailer xdg-open mailto:%s
 mailto_options 1
 mark 0
 mark_all_pages 0
-mark_color cyan
 max_load_image 4
 max_news 50
 meta_refresh 0
@@ -163,5 +155,15 @@ user_agent
 vi_prec_num 0
 view_unseenobject 1
 visited_anchor 1
-visited_color magenta
 wrap_search 0
+
+# Colors
+active_color cyan
+anchor_color blue
+basic_color terminal
+bg_color terminal
+color 1
+form_color red
+image_color green
+mark_color cyan
+visited_color magenta
