@@ -1,5 +1,3 @@
-accept_bad_cookie 0
-accept_cookie 1
 accept_encoding gzip, compress, bzip, bzip2, deflate
 accept_language en;q=1.0
 accept_media text/html, text/*;q=0.5, image/*, application/*, video/*, audio/*, x-scheme-handler/*, inode/*, message/*, font/*
@@ -113,7 +111,6 @@ retry_http 1
 reverse_mouse 0
 save_hist 1
 search_conv 1
-show_cookie 0
 show_lnum 0
 show_srch_str 1
 simple_preserve_space 0
@@ -136,7 +133,6 @@ tmp_dir
 ucs_conv 1
 urimethodmap ~/.w3m/urimethodmap, /etc/w3m/urimethodmap
 use_combining 1
-use_cookie 1
 use_dictcommand 1
 use_gb12345_map 0
 use_history 1
@@ -167,3 +163,9 @@ form_color red
 image_color green
 mark_color cyan
 visited_color magenta
+
+# Cookies
+accept_bad_cookie 0
+accept_cookie 1
+show_cookie 0
+use_cookie 1
