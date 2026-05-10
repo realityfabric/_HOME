@@ -24,4 +24,4 @@ alias ssha='eval "$(ssh-agent -s)"'
 alias tree='tree -I ".git/"' # Ignore .git dir even when using -a flag
 
 # backup configuration files
-alias confbak="rsync -avzr --existing ~/ ~/code/configs/"
+alias confbak="rsync -avzr --existing --human-readable ~/ ~/code/configs/"
